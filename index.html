@@ -1,33 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-
-    <title>Teste Hanne</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-
-  </head>
-
-  <body>
-
-    <label for="cameraFileInput">
-      <span class="btn">Veja</span>
-
-      <input	     
-        type="file"
-        id="cameraFileInput"
-	capture="user"
-        accept="image/*"
-      />
-	<br>
-
-	<a href="intent://camera/#Intent;action=android.media.action.VIDEO_CAPTURE;end">Teste</a>
-	
-	<video autoplay></video>
-
-  <script src="mirror.js"></script>
-
-    </label>
-
-  </body>
+	<head>
+		<title>Teste Hanne</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<video id="myVidPlayer" controls muted autoplay></video>
+		<button onclick="snapshot()" >Snapshot</button>
+		<div class="mycanvas">
+			<h6>Captured snapshot</h6>
+			<canvas></canvas>
+		</div>
+	</body>
 </html> 
