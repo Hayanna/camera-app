@@ -6,14 +6,7 @@ const video = document.querySelector('#myVidPlayer');
 var w, h;
 canvas.style.display = "none";
 	
-//new
-function snapshot(){
-  context.fillRect(0, 0, w, h);
-  context.drawImage(video, 0, 0, w, h);
-  canvas.style.display = "block";
-}
-
-window.navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+window.navigator.mediaDevices.getUserMedia({ video: true})
   .then(stream => {
     video.srcObject = stream;
     video.onloadedmetadata = (e) => {
@@ -27,7 +20,3 @@ window.navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 	    canvas.height = h;
 	};
 })
-
-.catch(error => {
-  alert('You have to enable the mike and the camera');
-});
