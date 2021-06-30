@@ -17,15 +17,15 @@ window.navigator.mediaDevices.getUserMedia({ video: true, audio: true })
   .then(stream => {
     video.srcObject = stream;
     video.onloadedmetadata = (e) => {
-    video.play();
+	    video.play();
 
-    //new
-    w = video.videoWidth;
-    h = video.videoHeight
-    
-    canvas.width = w;
-    canvas.height = h;
-  };
+	    //new
+	    w = video.videoWidth;
+	    h = video.videoHeight;
+
+	    canvas.width = w;
+	    canvas.height = h;
+	};
 })
 
 .catch(error => {
