@@ -6,7 +6,7 @@ const video = document.querySelector('#myVidPlayer');
 var w, h;
 canvas.style.display = "none";
 var i = 0;
-var txt = 'Estas pronto para conhecer o seu duo?'; /* The text */
+var txt = 'Quer conhecer o seu duplo?'; /* The text */
 var speed = 150; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
