@@ -5,19 +5,6 @@ const video = document.querySelector('#myVidPlayer');
 //w-width,h-height
 var w, h;
 canvas.style.display = "none";
-var i = 0;
-var txt = 'Quer conhecer o seu duplo?'; /* The text */
-var speed = 150; /* The speed/duration of the effect in milliseconds */
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
-window.onload = typeWriter();
 
 window.navigator.mediaDevices.getUserMedia({ video: true})
   .then(stream => {
